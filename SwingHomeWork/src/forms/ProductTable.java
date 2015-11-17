@@ -10,7 +10,7 @@ public class ProductTable extends JFrame{
         JFrame f = new JFrame("First");
         JPanel panel = new JPanel(new GridLayout(1,1));
 
-        String[] columns = {"name", "price", "wight", "manufacturer", "category"};
+        String[] columns = {"name", "price", "weight", "manufacturer", "category"};
         String[][] data = {
                 {"First", "150", "5", "Russia", "abc"},
                 {"Second", "150", "5", "Russia", "abcd"}

@@ -21,13 +21,14 @@ public class ProductForm extends JFrame{
         JLabel lprice = new JLabel("Price", JLabel.CENTER);
         final JTextField price = new JTextField("", 40);
 
-        JLabel lwight = new JLabel("Wight", JLabel.CENTER);
-        final JTextField wight = new JTextField("", 15);
+        JLabel lweight = new JLabel("Weight", JLabel.CENTER);
+        final JTextField weight = new JTextField("", 15);
 
         JLabel lmanufacturer = new JLabel("Manufacturer");
         String[] manufacturer = {"Russia", "USA"};
         JComboBox manufacturerList = new JComboBox(manufacturer);
         manufacturerList.setSelectedIndex(1);
+        manufacturerList.setEditable(false);
         manufacturerList.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,7 +37,7 @@ public class ProductForm extends JFrame{
             }
         });
 
-        JLabel lcategory = new JLabel("Category", JLabel.CENTER);
+        JLabel lcategory = new JLabel("Category", JLabel.LEFT);
         String[] names = {"abc", "abcd", "abcde"};
         JComboBox categoryBox = new JComboBox(names);
         categoryBox.setSelectedIndex(1);
@@ -52,12 +53,33 @@ public class ProductForm extends JFrame{
         Object[][] data = {"First", "150", "5", "Russia", "abc"},{"Second", "150", "5", "Russia", "abcd"};*/
         JButton add = new JButton("Add");
 
+        /*add.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String n = name.getText();
+                String p = price.getText();
+                String w = weight.getText();
+                String m = (String) manufacturerList.getSelectedItem();
+                String c = (String) categoryBox.getSelectedItem();
+
+                try {
+                    ProductRepository.add(new Product(n,Integer.parseInt(p), Integer.parseInt(w), Product.getManufacturer(m), CategoryRepository.getId(c)));
+                    name.setText("");
+                    price.setText("");
+                    weight.setText("");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });*/
+
         productContent.add(lname);
         productContent.add(name);
         productContent.add(lprice);
         productContent.add(price);
-        productContent.add(lwight);
-        productContent.add(wight);
+        productContent.add(lweight);
+        productContent.add(weight);
         productContent.add(lmanufacturer);
         productContent.add(manufacturerList);
         productContent.add(lcategory);
