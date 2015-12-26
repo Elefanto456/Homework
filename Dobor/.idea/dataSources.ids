@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - count@localhost" uuid="c52f5015-30a1-4f38-b9fd-bee46809da8c">
+    <database-info product="MySQL" version="5.6.27-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="count"/>
+      <table id="2" parent="1" name="expense"/>
+      <table id="3" parent="1" name="income"/>
+      <column id="4" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="5" parent="2" name="what">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="6" parent="2" name="count">
+        <data-type>decimal(7,2)</data-type>
+      </column>
+      <column id="7" parent="2" name="date">
+        <mandatory>1</mandatory>
+        <data-type>timestamp(6)</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP(6)&apos;</default-expression>
+      </column>
+      <key id="8" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="9" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="10" parent="3" name="fromWhere">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="11" parent="3" name="count">
+        <data-type>decimal(7,2)</data-type>
+      </column>
+      <column id="12" parent="3" name="date">
+        <mandatory>1</mandatory>
+        <data-type>timestamp(6)</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP(6)&apos;</default-expression>
+      </column>
+      <key id="13" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

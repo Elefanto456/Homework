@@ -1,0 +1,20 @@
+CREATE TABLE Income (
+  id INT NOT NULL AUTO_INCREMENT,
+  fromWhere VARCHAR(30) NOT NULL,
+  count DECIMAL(7, 2),
+  date TIMESTAMP(6) NOT NULL,
+  CONSTRAINT PK_Income_id PRIMARY KEY(id)
+);
+
+CREATE TABLE Expense (
+  id INT NOT NULL AUTO_INCREMENT,
+  what VARCHAR(50),
+  count DECIMAL(7, 2),
+  date TIMESTAMP(6) NOT NULL,
+  CONSTRAINT PK_Expense_id PRIMARY KEY(id)
+);
+
+
+/*DROP TABLE Income;
+DROP TABLE Expense;*/
+
